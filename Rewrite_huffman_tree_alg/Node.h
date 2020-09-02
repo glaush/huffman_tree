@@ -6,17 +6,19 @@ using std::shared_ptr;
 template<typename T>
 class Node
 {
+public:
+
     Node(const T);
     Node(const T, const int);
     Node(const int);
     Node(const int,
-        const shared_ptr<Node<T>>, const shared_ptr<Node<T>>);
+        const shared_ptr<Node>&, const shared_ptr<Node>&);
     
-    int get_count();
-    T get_value();
+    int get_count() const;
+    T get_value() const;
 
-    const shared_ptr<Node<T>>& get_left();
-    const shared_ptr<Node<T>>& get_right();
+    const shared_ptr<Node<T>>& get_left() const;
+    const shared_ptr<Node<T>>& get_right() const;
     Node& operator++();
 
 private:
