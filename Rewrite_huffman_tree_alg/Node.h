@@ -11,8 +11,13 @@ class Node
     Node(const int);
     Node(const int,
         const shared_ptr<Node<T>>, const shared_ptr<Node<T>>);
-
+    
     int get_count();
+    T get_value();
+
+    const shared_ptr<Node<T>>& get_left();
+    const shared_ptr<Node<T>>& get_right();
+    Node& operator++();
 
 private:
     shared_ptr<Node<T>> left;
