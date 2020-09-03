@@ -9,9 +9,9 @@ int main()
 				try
 				{
 								const auto input = "sampleinputtxtfile.txt";
-								const auto output = "sampleoutputtxtfile.txt";
+								const auto output = "sampleoutputtxtfile.bin";
 
-								ifstream file("sampletxtfile.txt");
+								ifstream file("sampleinputtxtfile.txt");
 								if (!file.is_open()) throw std::runtime_error("Exception: Unable to open file.");
 
 								stringstream stream;

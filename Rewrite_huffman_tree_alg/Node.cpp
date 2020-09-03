@@ -2,24 +2,25 @@
 
 
 template<typename T>
-inline Node<T>::Node(const T)
+inline Node<T>::Node(const T value) : left(nullptr), 
+right(nullptr), count(1), value(value)
 {
 }
 
 template<typename T>
-inline Node<T>::Node(const T, const int)
-{
-}
+inline Node<T>::Node(const T value, const int count) :
+left(nullptr), right(nullptr), count(count), value(value)
+{}
 
 template<typename T>
-inline Node<T>::Node(const int)
-{
-}
+inline Node<T>::Node(const int count)
+    : left(nullptr), right(nullptr), count(count)
+{}
 
 template<typename T>
-inline Node<T>::Node(const int, const shared_ptr<Node>&, const shared_ptr<Node>&)
-{
-}
+inline Node<T>::Node(const int count, const shared_ptr<Node>& left, const shared_ptr<Node>& right)
+    : left(left), right(right), count(count)
+{}
 
 template<typename T>
 inline int Node<T>::get_count() const

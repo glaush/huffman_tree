@@ -8,6 +8,7 @@ HuffmanTree::HuffmanTree(const string& data)
 void HuffmanTree::init(const string& data)
 {
     auto symbols_dictionary = create_dictionary(data);
+    auto symbols_vect = move_to_vector(symbols_dictionary);
 }
 
 void HuffmanTree::create_binary_tree(vector<SymbolPtr>&)
