@@ -19,7 +19,10 @@ public:
 
 
 private:
-    void create_binary_tree(vector<SymbolPtr>&) const;
+    void init(const string&);
+    void create_binary_tree(vector<SymbolPtr>&);
+
+    map<char, SymbolPtr> create_dictionary(const string&) const;
     vector<SymbolPtr> move_to_vector(map<char, SymbolPtr>&) const;
 
 

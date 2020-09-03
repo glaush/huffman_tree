@@ -147,11 +147,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryFileHelper.cpp" />
     <ClCompile Include="HuffmanTree.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Rewrite_huffman_tree_alg.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryFileHelper.h" />
     <ClInclude Include="HuffmanTree.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>

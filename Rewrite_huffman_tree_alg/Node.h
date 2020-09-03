@@ -19,7 +19,7 @@ public:
 
     const shared_ptr<Node<T>>& get_left() const;
     const shared_ptr<Node<T>>& get_right() const;
-    Node& operator++();
+    Node& operator ++();
 
 private:
     shared_ptr<Node<T>> left;
