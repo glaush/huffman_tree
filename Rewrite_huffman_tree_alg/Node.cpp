@@ -36,13 +36,13 @@ inline T Node<T>::get_value() const
 template<typename T>
 inline const shared_ptr<Node<T>>& Node<T>::get_left() const
 {
-    // TODO: вставьте здесь оператор return
+    return left;
 }
 
 template<typename T>
 inline const shared_ptr<Node<T>>& Node<T>::get_right() const
 {
-    // TODO: вставьте здесь оператор return
+    return right;
 }
 
 
@@ -52,3 +52,5 @@ Node<T>& Node<T>::operator++()
     ++count;
     return *this;
 }
+
+template class Node<char>;
