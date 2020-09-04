@@ -46,6 +46,18 @@ inline const shared_ptr<Node<T>>& Node<T>::get_right() const
     return right;
 }
 
+template<typename T>
+bool Node<T>::has_left() const
+{
+    return left != nullptr;
+}
+
+template<typename T>
+bool Node<T>::has_right() const
+{
+    return right != nullptr;;
+}
+
 
 template<typename T>
 Node<T>& Node<T>::operator++()

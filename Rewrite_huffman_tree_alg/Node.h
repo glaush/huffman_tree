@@ -19,6 +19,8 @@ public:
 
     const shared_ptr<Node<T>>& get_left() const;
     const shared_ptr<Node<T>>& get_right() const;
+    bool has_left() const;
+    bool has_right() const;
     Node& operator ++();
 
 private:
