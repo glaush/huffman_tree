@@ -17,6 +17,7 @@ class HuffmanTree
 public:
     HuffmanTree(const string&);
 
+    string encode(const string&) const;
 
 private:
     void init(const string&);

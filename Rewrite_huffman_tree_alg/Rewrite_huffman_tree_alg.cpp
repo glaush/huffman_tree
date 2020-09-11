@@ -2,6 +2,7 @@
 #include <fstream>
 #include "HuffmanTree.h"
 #include "BinaryFileHelper.h"
+#include "TransformUtils.h"
 
 
 int main()
@@ -24,6 +25,8 @@ int main()
 								cout << "Before compression: " << file_size << " bytes" << endl;
 
 								HuffmanTree huffman_tree(file_content);
+								const auto encoded = huffman_tree.encode(file_content);
+								const auto bytes = TransformUtils::transform_string_to_bytes(encoded);
 
 								return 0;
 				}

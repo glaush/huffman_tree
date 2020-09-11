@@ -5,6 +5,25 @@ HuffmanTree::HuffmanTree(const string& data)
     init(data);
 }
 
+string HuffmanTree::encode(const string& data) const
+{
+    const short  byte_size = 8;
+
+    stringstream encoded_stream;
+
+    for (const auto& c : data)
+    {
+        encoded_stream << hash_table.at(c);
+    }
+
+    auto result_str = encoded_stream.str();
+    for (auto i = 0; i < result_str.size() % byte_size; i++)
+    {
+        result_str += "0";
+    }
+    return result_str;
+}
+
 void HuffmanTree::init(const string& data)
 {
     auto symbols_dictionary = create_dictionary(data);

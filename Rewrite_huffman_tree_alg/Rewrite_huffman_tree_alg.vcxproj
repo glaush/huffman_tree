@@ -151,11 +151,13 @@
     <ClCompile Include="HuffmanTree.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Rewrite_huffman_tree_alg.cpp" />
+    <ClCompile Include="TransformUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryFileHelper.h" />
     <ClInclude Include="HuffmanTree.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="TransformUtils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
