@@ -28,6 +28,12 @@ int main()
 								const auto encoded = huffman_tree.encode(file_content);
 								const auto bytes = TransformUtils::transform_string_to_bytes(encoded);
 
+								BinaryFileHelper::write(output, bytes);
+								const auto after_size = BinaryFileHelper::get_file_size(output);
+								const auto delta = file_size - after_size;
+
+								const auto output_data = BinaryFileHelper::read(output);
+
 								return 0;
 				}
 				catch (const std::exception&)

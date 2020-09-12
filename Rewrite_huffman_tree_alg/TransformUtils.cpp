@@ -21,10 +21,10 @@ vector<unsigned char> TransformUtils::transform_string_to_bytes(const string& da
         bytes_code.push_back(byte);
     }
     return bytes_code;
-/*return vector<unsigned char>();*/
 }
 
-string TransformUtils::transform_byte_to_string(const unsigned char&)
+string TransformUtils::transform_byte_to_string(const unsigned char& byte)
 {
-    return string();
+    bitset<8> byte_str(byte);
+    return byte_str.to_string();
 }
