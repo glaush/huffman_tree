@@ -37,9 +37,10 @@ int main()
 								huffman_tree.decode(output_data);
 								return 0;
 				}
-				catch (const std::exception&)
+				catch (const std::exception& e)
 				{
-
+								cin.get();
+								return 0;
 				}
     
 
