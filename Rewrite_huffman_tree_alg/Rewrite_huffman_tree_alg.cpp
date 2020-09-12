@@ -32,8 +32,9 @@ int main()
 								const auto after_size = BinaryFileHelper::get_file_size(output);
 								const auto delta = file_size - after_size;
 
+								cout << "After compression: " << delta << " bytes" << endl;
 								const auto output_data = BinaryFileHelper::read(output);
-
+								huffman_tree.decode(output_data);
 								return 0;
 				}
 				catch (const std::exception&)

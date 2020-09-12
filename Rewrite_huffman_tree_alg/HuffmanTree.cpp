@@ -24,6 +24,36 @@ string HuffmanTree::encode(const string& data) const
     return result_str;
 }
 
+string HuffmanTree::decode(const string& binary_data_str) const
+{
+    stringstream decoded_data;
+    const char* const binary_str = binary_data_str.c_str();
+    unsigned long i = 0;
+    while (strstr(binary_str+i, "1"))
+    {
+        decoded_data << find_symbol(*binary_tree, binary_str + i, i);
+    }
+    return decoded_data.str();
+}
+
+char HuffmanTree::find_symbol(Symbol& node, const char* const path, unsigned long& i) const
+{
+    if (!node.has_left() && !node.has_right())
+    {
+        return node.get_value();
+    }
+
+    if (*path == '0' && node.has_left())
+    {
+        return find_symbol(*node.get_left(), path + 1, ++i);
+    }
+
+    if (*path == '1' && node.has_right())
+    {
+        return find_symbol(*node.get_right(), path + 1, ++i);
+    }
+}
+
 void HuffmanTree::init(const string& data)
 {
     auto symbols_dictionary = create_dictionary(data);
