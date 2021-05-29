@@ -150,5 +150,3 @@ vector<SymbolPtr> HuffmanTree::move_to_vector(map<char, SymbolPtr>& dictionary) 
     });
     return symbols;
 }
-
-
