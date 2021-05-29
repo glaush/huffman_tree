@@ -4,7 +4,6 @@
 #include "BinaryFileHelper.h"
 #include "TransformUtils.h"
 
-
 int main()
 {
 				try
